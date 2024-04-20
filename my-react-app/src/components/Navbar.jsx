@@ -42,7 +42,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`sticky top-[20px] bg-white z-10 flex justify-between items-center px-5 py-4 border-2 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
+      className={`max-w-[72rem] sticky top-[20px] bg-white z-10 flex justify-between items-center px-5 py-4 border-2 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
         isMobile ? "w-[20rem]" : "w-[80dvw]"
       }`}
     >

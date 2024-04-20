@@ -17,3 +17,4 @@ export default App;
 
 // TODO
 // 1. Refractor the cards text into objects and react components. Maybe? If framer allows it.
+// 2. Fix the resizing of the navbar and about sections to be conistent with each other.
