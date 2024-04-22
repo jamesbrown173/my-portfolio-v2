@@ -3,7 +3,10 @@ import GitHubStats from "./apiIntergrations/GitHubStats.jsx";
 
 function About() {
   return (
-    <div className="px-10 h-[80dvh] max-w-[90dvw] grid lg:grid-cols-4 lg:grid-rows-[1fr,1fr,2fr] sm:grid-cols-4 grid-cols-1 gap-7">
+    <div
+      id="about"
+      className="m-auto pt-[10rem] px-10 [100dvh] max-w-[90dvw] grid lg:grid-cols-4 lg:grid-rows-[1fr,1fr,2fr] sm:grid-cols-4 grid-cols-1 gap-7"
+    >
       <div className="bg-[#F7F7F7] rounded-md lg:col-span-2 lg:row-span-3 col-span-4 ">
         <AboutMeText />
       </div>

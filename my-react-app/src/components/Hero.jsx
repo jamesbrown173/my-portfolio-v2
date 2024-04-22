@@ -1,6 +1,9 @@
 function Hero() {
   return (
-    <div className="h-[88dvh] flex items-center  flex-col justify-evenly">
+    <div
+      id="hero"
+      className="h-[88dvh] flex items-center  flex-col justify-evenly"
+    >
       <h1 className="font-mono text-2xl leading-10 px-5">
         Hi! I'm James! I'm a web developer working with ...
       </h1>

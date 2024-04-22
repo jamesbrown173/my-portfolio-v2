@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
-function MenuItem({ text }) {
+function MenuItem({ text, link }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ function MenuItem({ text }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative">
-        {text}
+        <a href={link}>{text}</a>
         <div
           className={`absolute top-6 left-1/2 transform -translate-x-1/2 bg-yellow-400 w-2 h-2 rounded-full transition-opacity duration-500 ${
             isHovered ? "opacity-100" : "opacity-0"
@@ -42,7 +42,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`max-w-[72rem] sticky top-[20px] bg-white z-10 flex justify-between items-center px-5 py-4 border-2 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
+      className={`mt-6 place-self-center max-w-[72rem] sticky top-[30px] bg-white z-10 flex justify-between items-center px-5 py-4 border-2 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
         isMobile ? "w-[20rem]" : "w-[80dvw]"
       }`}
     >
@@ -52,16 +52,18 @@ function Navbar() {
         </div>
         {!isMobile ? (
           <>
-            <div className="font-semibold">James</div>
+            <div className="font-semibold">
+              <a href="#hero">James</a>
+            </div>
             <MenuItem text="|" />
-            <MenuItem text="About" />
-            <MenuItem text="Works" />
-            <MenuItem text="Connect" />{" "}
+            <MenuItem text="About" link="#about" />
+            <MenuItem text="Works" link="#works" />
+            <MenuItem text="Connect" link="#connect" />{" "}
           </>
         ) : null}
       </div>
       <div className="right-items flex-grow flex items-center space-x-4 justify-end">
-        <button className="bg-black text-white px-4 py-1 rounded-full">
+        <button className="bg-black text-white px-4 py-2 rounded-full">
           Say "Hello!"
         </button>
       </div>

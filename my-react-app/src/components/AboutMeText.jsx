@@ -1,6 +1,9 @@
 function AboutMeText() {
   return (
-    <div className="px-9 py-3 flex flex-col justify-evenly align the content center h-[100%]">
+    <div
+      id="AboutMeText"
+      className="px-9 py-3 flex flex-col justify-evenly align the content center h-[100%]"
+    >
       <h1 className="font-medium text-xl text-left">
         📚 What I'm about <hr className="pt-1" />
       </h1>

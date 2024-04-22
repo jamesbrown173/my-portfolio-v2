@@ -2,13 +2,17 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Works from "./components/Works";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="flex items-center justify-center flex-col">
+    <div className="flex flex-col gap-10">
       <Navbar />
       <Hero />
       <About />
+      <Works />
+      <Contact />
     </div>
   );
 }
