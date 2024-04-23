@@ -1,12 +1,17 @@
+import { motion } from "framer-motion";
 function Hero() {
   return (
     <div
       id="hero"
       className="h-[88dvh] flex items-center  flex-col justify-evenly"
     >
-      <h1 className="font-mono text-2xl leading-10 px-5">
+      <motion.h1
+        whileInView={{ scale: 1.2 }}
+        whileTap={{ scale: 1.1 }}
+        className="font-mono text-2xl leading-10 px-5"
+      >
         Hi! I'm James! I'm a web developer working with ...
-      </h1>
+      </motion.h1>
 
       <div className="languagesAndSkills-container flex flex-row flex-wrap gap-2 justify-center">
         <div id="card-vscode" className="languagesAndSkills-card">
