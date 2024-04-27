@@ -27,7 +27,7 @@ html {
 }
 
 /* Sets a border color based upon breakpoint. Used for dev purposes */
-/* * {
+* {
   border: 1px rgb(255, 117, 117) dashed;
 }
 
@@ -41,7 +41,7 @@ html {
   * {
     border: 1px rgb(198, 255, 122) dashed;
   }
-} */
+}
 
 /* The hero section cards. This was difficult to style using Tailwind, so it's here. */
 .languagesAndSkills-card {

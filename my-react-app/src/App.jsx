@@ -4,12 +4,15 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
+import { useRef } from "react";
 
 function App() {
+  const heroRef = useRef(null);
+
   return (
     <div className="flex flex-col gap-10">
       <Navbar />
-      <Hero />
+      <Hero forwardedRef={heroRef} />
       <About />
       <Works />
       <Contact />

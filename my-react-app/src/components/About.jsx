@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 function About() {
   return (
     <div
-      whileInView={{ scale: 0.8 }}
       id="about"
       className="m-auto pt-[10rem] px-10 [100dvh] max-w-[90dvw] grid lg:grid-cols-4 lg:grid-rows-[1fr,1fr,2fr] sm:grid-cols-4 grid-cols-1 gap-7"
     >
