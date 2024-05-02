@@ -63,12 +63,19 @@ function Navbar() {
         ) : null}
       </div>
       <div className="right-items flex-grow flex items-center space-x-4 justify-end">
-        <button className="bg-black text-white px-4 py-2 rounded-full">
+        <button
+          onClick={() => sendEmail()}
+          className="bg-black text-white px-4 py-2 rounded-full"
+        >
           Say "Hello!"
         </button>
       </div>
     </nav>
   );
+}
+
+function sendEmail() {
+  window.location.assign("mailto:jamesbrown173@gmail.com");
 }
 
 export default Navbar;

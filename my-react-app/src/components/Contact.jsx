@@ -5,6 +5,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { BiPointer } from "react-icons/bi";
 
 function Contact() {
   return (
@@ -13,7 +14,10 @@ function Contact() {
         <h1 className="font-medium text-xl">
           Ready to connect? Let's make it happen...
         </h1>
-        <button className="bg-black text-white px-4 py-2 rounded-full w-28">
+        <button
+          onClick={() => sendEmail()}
+          className="bg-black text-white px-4 py-2 rounded-full w-28"
+        >
           Let's talk!
         </button>
         <hr />
@@ -26,20 +30,30 @@ function Contact() {
             <h2 className="text-[#878787]">Follow</h2>
             <div className="flex gap-2">
               <FontAwesomeIcon
+                onClick={() =>
+                  (location.href = "https://twitter.com/JamesMiBr")
+                }
                 icon={faTwitter}
-                className="text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
+                className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
               <FontAwesomeIcon
+                onClick={() =>
+                  (location.href = "https://linkedin.com/in/jbrown20/")
+                }
                 icon={faLinkedinIn}
-                className="text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
+                className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
               <FontAwesomeIcon
+                onClick={() =>
+                  (location.href = "https://github.com/jamesbrown173")
+                }
                 icon={faGithub}
-                className="text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
+                className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
-              <FontAwesomeIcon
+              <FontAwesomeIcon // HOW TO set the mouse to pointer when it's hovered over this icon?
+                onClick={() => sendEmail()}
                 icon={faEnvelope}
-                className="text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
+                className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
             </div>
           </div>
@@ -47,6 +61,10 @@ function Contact() {
       </div>
     </div>
   );
+}
+
+function sendEmail() {
+  window.location.assign("mailto:jamesbrown173@gmail.com");
 }
 
 export default Contact;

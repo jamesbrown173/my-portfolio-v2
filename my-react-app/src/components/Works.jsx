@@ -10,10 +10,12 @@ function Works() {
         <WorksCard
           projectTitle="Scoopy"
           skills={["node.js", "react", "vite"]}
+          imgUrl="/Bloggy.png"
         />
         <WorksCard
           projectTitle="Bloggy"
           skills={["express.js", "node.js", "html5", "css3"]}
+          imgUrl="/Scoopy.png"
         />
         <WorksCard isEmpty={true} projectTitle="" skills="" />
         <WorksCard isEmpty={true} projectTitle="" skills="" />

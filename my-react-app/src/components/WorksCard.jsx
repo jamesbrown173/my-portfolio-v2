@@ -8,9 +8,9 @@ function WorksCard(props) {
   if (!props.isEmpty) {
     return (
       // Remove the h-30rem after the image has been added in.
-      <div className="bg-[#F7F7F7] rounded-3xl flex flex-col p-5 justify-end">
-        <div className="works-card-top flex justify-center items-center m-auto md:w-[30rem] md:h-[20rem]">
-          image
+      <div className="bg-[#F7F7F7] rounded-3xl flex flex-col  justify-end p-12">
+        <div className="works-card-top flex justify-center items-center m-auto ">
+          <img className="rounded-md" src={props.imgUrl} alt="" />
         </div>
         <div className="works-card-mid">
           <h1 className="text-3xl text-left item my-2">{props.projectTitle}</h1>
@@ -19,6 +19,7 @@ function WorksCard(props) {
           {props.skills.map((skillItem, index) => (
             <WorksCardButton skill={skillItem} key={index} id={index} />
           ))}
+          <img src="" alt="" />
         </div>
       </div>
     );

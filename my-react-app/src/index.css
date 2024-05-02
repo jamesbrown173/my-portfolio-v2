@@ -91,7 +91,7 @@ html {
 
 #card-nodeJS {
   background-color: #f3ffa3;
-  translate: -1rem 5rem;
+  translate: 10rem 1rem;
   z-index: 2;
 }
 #card-text-nodeJS {
