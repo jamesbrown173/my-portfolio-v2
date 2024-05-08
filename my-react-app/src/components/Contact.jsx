@@ -16,7 +16,8 @@ function Contact() {
         </h1>
         <button
           onClick={() => sendEmail()}
-          className="bg-black text-white px-4 py-2 rounded-full w-28"
+          id="custom-button-border"
+          className="bg-black text-white  rounded-full w-28 border-[solid #c0c0c0 1px] bg-black text-white h-[40px] w-[120px] rounded-full shadow-customButton pb-1  hover:shadow-black  hover:pb-0 transition-all ease-in delay-75 duration-100 hover:border-black"
         >
           Let's talk!
         </button>
@@ -50,7 +51,7 @@ function Contact() {
                 icon={faGithub}
                 className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
-              <FontAwesomeIcon // HOW TO set the mouse to pointer when it's hovered over this icon?
+              <FontAwesomeIcon
                 onClick={() => sendEmail()}
                 icon={faEnvelope}
                 className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"

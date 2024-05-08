@@ -42,7 +42,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`mt-6 place-self-center max-w-[72rem] sticky top-[30px] bg-white z-10 flex justify-between items-center px-5 py-4 border-2 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
+      className={`mt-6 place-self-center max-w-[72rem] sticky top-[30px] bg-white z-10 flex justify-between items-center px-5 py-4 border-4 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
         isMobile ? "w-[20rem]" : "w-[80dvw]"
       }`}
     >
@@ -65,9 +65,10 @@ function Navbar() {
       <div className="right-items flex-grow flex items-center space-x-4 justify-end">
         <button
           onClick={() => sendEmail()}
-          className="bg-black text-white px-4 py-2 rounded-full"
+          id="custom-button-border"
+          className="border-[solid #c0c0c0 1px] bg-black text-white h-[40px] w-[120px] rounded-full shadow-customButton pb-1  hover:shadow-black  hover:pb-0 transition-all ease-in delay-75 duration-100 hover:border-black"
         >
-          Say "Hello!"
+          <h1 className="">Say "Hello!"</h1>
         </button>
       </div>
     </nav>

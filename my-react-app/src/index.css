@@ -91,7 +91,7 @@ html {
 
 #card-nodeJS {
   background-color: #f3ffa3;
-  translate: 10rem 1rem;
+  translate: 1rem 2rem;
   z-index: 2;
 }
 #card-text-nodeJS {
@@ -169,4 +169,10 @@ html {
   );
   background-clip: text;
   color: transparent;
+}
+
+#custom-button-border {
+  border: #80808046;
+  border-width: 1px;
+  border-style: solid;
 }

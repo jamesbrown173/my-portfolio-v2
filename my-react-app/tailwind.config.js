@@ -5,7 +5,11 @@ export default {
     fontFamily: {
       mono: ["DM Mono", "monospace"],
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        customButton: "0px -6px 3px -2px #989898 inset",
+      },
+    },
   },
   plugins: [],
 };
