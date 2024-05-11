@@ -9,7 +9,10 @@ import { BiPointer } from "react-icons/bi";
 
 function Contact() {
   return (
-    <div id="connect" className="pt-[10rem] flex flex-col text-left h-dvh">
+    <div
+      id="connect"
+      className="h-[100vh] flex flex-col text-left border-yellow-500"
+    >
       <div className="bg-[#F7F7F7] rounded-3xl m-auto p-10 w-10/12 h-[20rem] flex flex-col justify-evenly">
         <h1 className="font-medium text-xl">
           Ready to connect? Let's make it happen...

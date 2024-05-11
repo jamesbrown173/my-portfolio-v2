@@ -42,7 +42,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`mt-6 place-self-center max-w-[72rem] sticky top-[30px] bg-white z-10 flex justify-between items-center px-5 py-4 border-4 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
+      className={`mt-6 place-self-center max-w-[72rem] sticky top-[30px] bg-white bg-opacity-95 bg-blur z-10 flex justify-between items-center px-5 py-4 border-4 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
         isMobile ? "w-[20rem]" : "w-[80dvw]"
       }`}
     >

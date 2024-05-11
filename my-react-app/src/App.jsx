@@ -10,7 +10,7 @@ function App() {
   const heroRef = useRef(null);
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col">
       <Navbar />
       <Hero forwardedRef={heroRef} />
       <About />
