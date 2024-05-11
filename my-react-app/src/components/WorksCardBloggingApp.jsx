@@ -16,8 +16,8 @@ const WorksCardBloggingApp = () => {
             <ul className="font-normal text-sm text-left">
               <li>nodeJS</li>
               <li>expressJS</li>
-              <li>materialUI</li>
-              <li>nodeJS</li>
+              <li>tailwindCSS</li>
+              <li>tailwind components</li>
             </ul>
           </p>
         </div>
