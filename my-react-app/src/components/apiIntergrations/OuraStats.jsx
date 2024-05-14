@@ -4,63 +4,65 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPagelines } from "@fortawesome/free-brands-svg-icons";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { faFire } from "@fortawesome/free-solid-svg-icons";
+import OuraRingToken from "../../../tokens";
 
 const OuraStats = () => {
   // State variables to hold API response data
-  //   const [activityScore, setActivityScore] = useState(null);
-  //   const [readinessScore, setReadinessScore] = useState(null);
-  //   const [sleepScore, setSleepScore] = useState(null);
+  // const [activityScore, setActivityScore] = useState(null);
+  // const [readinessScore, setReadinessScore] = useState(null);
+  // const [sleepScore, setSleepScore] = useState(null);
 
-  //   useEffect(() => {
-  //     const fetchData = async () => {
-  //       // API authorization token and date range for data retrieval
-  //       const token = "BKNNADUDB5H73KTPBVA3RBPPSSJBMU7Y";
-  //       const startDate = "2024-05-09";
-  //       const endDate = "2024-05-10";
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     // API authorization token and date range for data retrieval
+  //     const token = "BKNNADUDB5H73KTPBVA3RBPPSSJBMU7Y";
+  //     const startDate = "2024-05-12";
+  //     const endDate = "2024-05-13";
 
-  //       const headers = {
-  //         Authorization: `Bearer ${token}`,
-  //       };
-
-  //       // API endpoints for different data types
-  //       const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  //       const activityUrl =
-  //         "https://api.ouraring.com/v2/usercollection/daily_activity";
-  //       const readinessUrl =
-  //         "https://api.ouraring.com/v2/usercollection/daily_readiness";
-  //       const sleepUrl = "https://api.ouraring.com/v2/usercollection/daily_sleep";
-
-  //       try {
-  //         // Fetch daily activity data
-  //         const activityResponse = await axios.get(
-  //           `${proxyUrl}${activityUrl}?start_date=${startDate}&end_date=${endDate}`,
-  //           { headers: headers }
-  //         );
-
-  //         // Fetch daily readiness data
-  //         const readinessResponse = await axios.get(
-  //           `${proxyUrl}${readinessUrl}?start_date=${startDate}&end_date=${endDate}`,
-  //           { headers: headers }
-  //         );
-
-  //         // Fetch daily sleep data
-  //         const sleepResponse = await axios.get(
-  //           `${proxyUrl}${sleepUrl}?start_date=${startDate}&end_date=${endDate}`,
-  //           { headers: headers }
-  //         );
-
-  //         // Set scores from response data
-  //         setActivityScore(activityResponse.data?.data[0]?.score);
-  //         setReadinessScore(readinessResponse.data?.data[0]?.score);
-  //         setSleepScore(sleepResponse.data?.data[0]?.score);
-  //       } catch (error) {
-  //         console.error("Error fetching data:", error);
-  //       }
+  //     const headers = {
+  //       Authorization: `Bearer ${token}`,
   //     };
 
-  //     fetchData(); // Call fetchData() when component mounts
-  //   }, []); // Empty dependency array ensures fetchData() runs only on component mount
+  //     // API endpoints for different data types
+  //     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+  //     const activityUrl =
+  //       "https://api.ouraring.com/v2/usercollection/daily_activity";
+  //     const readinessUrl =
+  //       "https://api.ouraring.com/v2/usercollection/daily_readiness";
+  //     const sleepUrl = "https://api.ouraring.com/v2/usercollection/daily_sleep";
 
+  //     try {
+  //       // Fetch daily activity data
+  //       const activityResponse = await axios.get(
+  //         `${activityUrl}?start_date=${startDate}&end_date=${endDate}`,
+  //         { headers: headers }
+  //       );
+
+  //       // Fetch daily readiness data
+  //       const readinessResponse = await axios.get(
+  //         `${readinessUrl}?start_date=${startDate}&end_date=${endDate}`,
+  //         { headers: headers }
+  //       );
+
+  //       // Fetch daily sleep data
+  //       const sleepResponse = await axios.get(
+  //         `${sleepUrl}?start_date=${startDate}&end_date=${endDate}`,
+  //         { headers: headers }
+  //       );
+
+  //       // Set scores from response data
+  //       setActivityScore(activityResponse.data?.data[0]?.score);
+  //       setReadinessScore(readinessResponse.data?.data[0]?.score);
+  //       setSleepScore(sleepResponse.data?.data[0]?.score);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+
+  //   fetchData(); // Call fetchData() when component mounts
+  // }, []); // Empty dependency array ensures fetchData() runs only on component mount
+
+  // Temporary values to prevent many API requests during testing
   const activityScore = 94;
   const readinessScore = 81;
   const sleepScore = 82;

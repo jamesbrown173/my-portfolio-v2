@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
-function MenuItem({ text, link }) {
+function MenuItem({ text, link, isActive }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -12,10 +12,12 @@ function MenuItem({ text, link }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative">
-        <a href={link}>{text}</a>
+        <a className="" href={link}>
+          {text}
+        </a>
         <div
-          className={`absolute top-6 left-1/2 transform -translate-x-1/2 bg-yellow-400 w-2 h-2 rounded-full transition-opacity duration-500 ${
-            isHovered ? "opacity-100" : "opacity-0"
+          className={`absolute top-5 left-1/2 transform -translate-x-1/2 bg-[#dac341] w-4 h-4 rounded-t-lg rounded-b-none transition-opacity duration-500 blur-md ${
+            isHovered || isActive ? "opacity-100" : "opacity-0"
           }`}
         ></div>
       </div>
@@ -23,7 +25,7 @@ function MenuItem({ text, link }) {
   );
 }
 
-function Navbar() {
+function Navbar({ activeSection }) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -40,14 +42,21 @@ function Navbar() {
     };
   }, []);
 
+  function toggleTheme() {
+    document.documentElement.classList.toggle("dark");
+  }
+
   return (
     <nav
       className={`mt-6 place-self-center max-w-[72rem] sticky top-[30px] bg-white bg-opacity-95 bg-blur z-10 flex justify-between items-center px-5 py-4 border-4 border-[#ebebeb5b] border-solid rounded-full shadow-md ${
         isMobile ? "w-[20rem]" : "w-[80dvw]"
       }`}
     >
-      <div className="left-items flex-grow flex items-center space-x-4">
-        <div className="bg-[#FFE965] rounded-full border-2 border-solid border-[#00000010] flex p-0.5 justify-center items-center h-10 w-10">
+      <div className="left-items flex-grow flex items-center space-x-4 cursor-pointer">
+        <div
+          onClick={toggleTheme}
+          className="bg-[#FFE965] rounded-full border-2 border-solid border-[#00000010] flex p-0.5 justify-center items-center h-10 w-10"
+        >
           <FontAwesomeIcon className="text-xl" icon={faCircleHalfStroke} />
         </div>
         {!isMobile ? (
@@ -56,9 +65,21 @@ function Navbar() {
               <a href="#hero">James</a>
             </div>
             <MenuItem text="|" />
-            <MenuItem text="About" link="#about" />
-            <MenuItem text="Works" link="#works" />
-            <MenuItem text="Connect" link="#connect" />{" "}
+            <MenuItem
+              text="About"
+              link="#about"
+              isActive={activeSection === "about"}
+            />
+            <MenuItem
+              text="Works"
+              link="#works"
+              isActive={activeSection === "works"}
+            />
+            <MenuItem
+              text="Connect"
+              link="#connect"
+              isActive={activeSection === "connect"}
+            />
           </>
         ) : null}
       </div>

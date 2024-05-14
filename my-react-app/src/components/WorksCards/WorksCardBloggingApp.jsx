@@ -12,13 +12,8 @@ const WorksCardBloggingApp = () => {
             and edit them.
           </p>
           <p className="font-normal text-sm text-left">
-            Tech Stack:
-            <ul className="font-normal text-sm text-left">
-              <li>nodeJS</li>
-              <li>expressJS</li>
-              <li>tailwindCSS</li>
-              <li>tailwind components</li>
-            </ul>
+            The techstack used on the reactive app was <b>React</b> and{" "}
+            <b>Material UI</b>.
           </p>
         </div>
         <div className="leftInnerContainerLower flex flex-col w-auto h-auto gap-4 ">
@@ -36,7 +31,7 @@ const WorksCardBloggingApp = () => {
         <div className="imgSizingContainer h-full">
           <img
             className="rounded-[2rem]"
-            src="placeHolderContent.webp"
+            src="Scoopy-Screenshot-Desktop.png"
             alt="placehodlerimage"
           />
         </div>

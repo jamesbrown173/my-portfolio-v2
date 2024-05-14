@@ -9,11 +9,8 @@ import { BiPointer } from "react-icons/bi";
 
 function Contact() {
   return (
-    <div
-      id="connect"
-      className="h-[100vh] flex flex-col text-left border-yellow-500"
-    >
-      <div className="bg-[#F7F7F7] rounded-3xl m-auto p-10 w-10/12 h-[20rem] flex flex-col justify-evenly">
+    <div id="connect" className=" h-[100vh] flex flex-col text-left ">
+      <div className="bg-white bg-gradient-to-tr from-white from-20% via-amber-50 via-80% to-slate-100  rounded-3xl m-auto p-10 w-10/12 h-[20rem] flex flex-col justify-evenly border-gray-200 border-2 flex gap-2">
         <h1 className="font-medium text-xl">
           Ready to connect? Let's make it happen...
         </h1>
@@ -40,6 +37,7 @@ function Contact() {
                 icon={faTwitter}
                 className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
+
               <FontAwesomeIcon
                 onClick={() =>
                   (location.href = "https://linkedin.com/in/jbrown20/")
@@ -47,6 +45,7 @@ function Contact() {
                 icon={faLinkedinIn}
                 className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
+
               <FontAwesomeIcon
                 onClick={() =>
                   (location.href = "https://github.com/jamesbrown173")
@@ -54,6 +53,7 @@ function Contact() {
                 icon={faGithub}
                 className="cursor-pointer text-[#878787] border-2 border-[#cccccc] border-solid rounded-full p-1 h-4 w-4"
               />
+
               <FontAwesomeIcon
                 onClick={() => sendEmail()}
                 icon={faEnvelope}

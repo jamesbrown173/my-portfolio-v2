@@ -3,8 +3,10 @@ function GitHub() {
     window.open("https://github.com/jamesbrown173", "_blank"); // Opens GitHub in a new tab
   };
 
+  // The first containing div has a fixed hieght of 10 rem. This is a hacky solution and could cause problems later down the line consider fixing it.
+
   return (
-    <div className="flex flex-col p-3 h-full items-center justify-center">
+    <div className="flex flex-col p-3 h-[10rem] items-center justify-center">
       <div className="upperContainer flex w-full justify-end h-0">
         <div className="gitHubIconContainer w-9 h-9 flex items-center justify-center">
           <img

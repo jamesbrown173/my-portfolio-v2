@@ -120,7 +120,7 @@ function Hero() {
   return (
     <div
       id="hero"
-      className="h-[70vh] flex items-center flex-col justify-evenly"
+      className="h-[70vh] flex items-center flex-col justify-evenly "
       ref={ref}
     >
       <h1 className="font-mono text-3xl leading-10 px-5">{typedText}</h1>
