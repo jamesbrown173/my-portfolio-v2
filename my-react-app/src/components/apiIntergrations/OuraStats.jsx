@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPagelines } from "@fortawesome/free-brands-svg-icons";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { faFire } from "@fortawesome/free-solid-svg-icons";
-import OuraRingToken from "../../../tokens";
+// import OuraRingToken from "../../../tokens";
 
 const OuraStats = () => {
   // State variables to hold API response data
