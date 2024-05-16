@@ -5,7 +5,6 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { BiPointer } from "react-icons/bi";
 
 function Contact() {
   return (
