@@ -48,7 +48,7 @@ function About() {
         <div className="bg-[#F7F7F7]  rounded-md lg:col-span-2 col-span-4  flex-col justify-evenly drop-shadow-sm">
           <GitHubStats />
         </div>
-        <div className=" border-[#F7F7F7] border-2  rounded-md flex items-center lg:col-span-1 md:col-span-2 sm:col-span-2 col-span-2">
+        <div className=" border-[#F7F7F7]  rounded-md flex items-center lg:col-span-1 md:col-span-2 sm:col-span-2 col-span-2">
           <StravaStats1 />
         </div>
         <div className=" rounded-md flex items-center lg:col-span-1 md:col-span-2 sm:col-span-2 col-span-2">

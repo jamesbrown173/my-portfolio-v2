@@ -7,64 +7,64 @@ import { faFire } from "@fortawesome/free-solid-svg-icons";
 
 const OuraStats = () => {
   //State variables to hold API response data
-  const [activityScore, setActivityScore] = useState(null);
-  const [readinessScore, setReadinessScore] = useState(null);
-  const [sleepScore, setSleepScore] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      // API authorization token and date range for data retrieval
-      const token = "BKNNADUDB5H73KTPBVA3RBPPSSJBMU7Y";
-      const startDate = "2024-05-12";
-      const endDate = "2024-05-13";
-
-      const headers = {
-        Authorization: `Bearer ${token}`,
-      };
-
-      // API endpoints for different data types
-      // const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-      const activityUrl =
-        "https://api.ouraring.com/v2/usercollection/daily_activity";
-      const readinessUrl =
-        "https://api.ouraring.com/v2/usercollection/daily_readiness";
-      const sleepUrl = "https://api.ouraring.com/v2/usercollection/daily_sleep";
-
-      try {
-        // Fetch daily activity data
-        const activityResponse = await axios.get(
-          `${activityUrl}?start_date=${startDate}&end_date=${endDate}`,
-          { headers: headers },
-        );
-
-        // Fetch daily readiness data
-        const readinessResponse = await axios.get(
-          `${readinessUrl}?start_date=${startDate}&end_date=${endDate}`,
-          { headers: headers },
-        );
-
-        // Fetch daily sleep data
-        const sleepResponse = await axios.get(
-          `${sleepUrl}?start_date=${startDate}&end_date=${endDate}`,
-          { headers: headers },
-        );
-
-        // Set scores from response data
-        setActivityScore(activityResponse.data?.data[0]?.score);
-        setReadinessScore(readinessResponse.data?.data[0]?.score);
-        setSleepScore(sleepResponse.data?.data[0]?.score);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData(); // Call fetchData() when component mounts
-  }, []); // Empty dependency array ensures fetchData() runs only on component mount
+  //  const [activityScore, setActivityScore] = useState(null);
+  //  const [readinessScore, setReadinessScore] = useState(null);
+  //  const [sleepScore, setSleepScore] = useState(null);
+  //
+  //  useEffect(() => {
+  //    const fetchData = async () => {
+  //      // API authorization token and date range for data retrieval
+  //      const token = "BKNNADUDB5H73KTPBVA3RBPPSSJBMU7Y";
+  //      const startDate = "2024-05-12";
+  //      const endDate = "2024-05-13";
+  //
+  //      const headers = {
+  //        Authorization: `Bearer ${token}`,
+  //      };
+  //
+  //      // API endpoints for different data types
+  //      // const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+  //      const activityUrl =
+  //        "https://api.ouraring.com/v2/usercollection/daily_activity";
+  //      const readinessUrl =
+  //        "https://api.ouraring.com/v2/usercollection/daily_readiness";
+  //      const sleepUrl = "https://api.ouraring.com/v2/usercollection/daily_sleep";
+  //
+  //      try {
+  //        // Fetch daily activity data
+  //        const activityResponse = await axios.get(
+  //          `${activityUrl}?start_date=${startDate}&end_date=${endDate}`,
+  //          { headers: headers },
+  //        );
+  //
+  //        // Fetch daily readiness data
+  //        const readinessResponse = await axios.get(
+  //          `${readinessUrl}?start_date=${startDate}&end_date=${endDate}`,
+  //          { headers: headers },
+  //        );
+  //
+  //        // Fetch daily sleep data
+  //        const sleepResponse = await axios.get(
+  //          `${sleepUrl}?start_date=${startDate}&end_date=${endDate}`,
+  //          { headers: headers },
+  //        );
+  //
+  //        // Set scores from response data
+  //        setActivityScore(activityResponse.data?.data[0]?.score);
+  //        setReadinessScore(readinessResponse.data?.data[0]?.score);
+  //        setSleepScore(sleepResponse.data?.data[0]?.score);
+  //      } catch (error) {
+  //        console.error("Error fetching data:", error);
+  //      }
+  //    };
+  //
+  //    fetchData(); // Call fetchData() when component mounts
+  //  }, []); // Empty dependency array ensures fetchData() runs only on component mount
 
   // Temporary values to prevent many API requests during testing
-  //const activityScore = 94;
-  //const readinessScore = 81;
-  //const sleepScore = 82;
+  const activityScore = 94;
+  const readinessScore = 81;
+  const sleepScore = 82;
 
   const backgroundGradient = "bg-gradient-to-br from-blue-700 to-black";
   const todaysDate = new Date().toDateString();
