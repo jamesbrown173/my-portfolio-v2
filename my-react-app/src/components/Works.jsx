@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useRef, useEffect, useState } from "react";
 import { useInView } from "framer-motion";
 import WorksCardOuraJsonUploader from "./WorksCards/WorksCardOuraJsonUploader";
+import NextJsDashboard from "./WorksCards/NextJsDashboard";
 
 function Works() {
   const [typedText, setTypedText] = useState(""); // State to hold the typed text
@@ -32,6 +33,7 @@ function Works() {
       </h1>
       <WorksCardBloggingApp />
       <WorksCardOuraJsonUploader />
+      <NextJsDashboard />
     </div>
   );
 }
