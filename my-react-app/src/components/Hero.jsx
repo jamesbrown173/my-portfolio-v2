@@ -106,7 +106,7 @@ function Hero() {
       }),
       rotate: useSpring(
         useTransform(scrollY, [25, 250], [rotateStart, rotateEnd]),
-        { damping: dampAmount, stiffness: stiffAmount }
+        { damping: dampAmount, stiffness: stiffAmount },
       ),
     };
 
@@ -114,7 +114,7 @@ function Hero() {
   };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("Page scroll: ", latest);
+    // console.log("Page scroll: ", latest);
   });
 
   return (

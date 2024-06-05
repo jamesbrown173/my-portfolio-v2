@@ -7,70 +7,55 @@ import { faFire } from "@fortawesome/free-solid-svg-icons";
 
 const OuraStats = () => {
   //State variables to hold API response data
-  //  const [activityScore, setActivityScore] = useState(null);
-  //  const [readinessScore, setReadinessScore] = useState(null);
-  //  const [sleepScore, setSleepScore] = useState(null);
-  //
-  //  useEffect(() => {
-  //    const fetchData = async () => {
-  //      // API authorization token and date range for data retrieval
-  //      const token = "BKNNADUDB5H73KTPBVA3RBPPSSJBMU7Y";
-  //      const startDate = "2024-05-12";
-  //      const endDate = "2024-05-13";
-  //
-  //      const headers = {
-  //        Authorization: `Bearer ${token}`,
-  //      };
-  //
-  //      // API endpoints for different data types
-  //      // const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-  //      const activityUrl =
-  //        "https://api.ouraring.com/v2/usercollection/daily_activity";
-  //      const readinessUrl =
-  //        "https://api.ouraring.com/v2/usercollection/daily_readiness";
-  //      const sleepUrl = "https://api.ouraring.com/v2/usercollection/daily_sleep";
-  //
-  //      try {
-  //        // Fetch daily activity data
-  //        const activityResponse = await axios.get(
-  //          `${activityUrl}?start_date=${startDate}&end_date=${endDate}`,
-  //          { headers: headers },
-  //        );
-  //
-  //        // Fetch daily readiness data
-  //        const readinessResponse = await axios.get(
-  //          `${readinessUrl}?start_date=${startDate}&end_date=${endDate}`,
-  //          { headers: headers },
-  //        );
-  //
-  //        // Fetch daily sleep data
-  //        const sleepResponse = await axios.get(
-  //          `${sleepUrl}?start_date=${startDate}&end_date=${endDate}`,
-  //          { headers: headers },
-  //        );
-  //
-  //        // Set scores from response data
-  //        setActivityScore(activityResponse.data?.data[0]?.score);
-  //        setReadinessScore(readinessResponse.data?.data[0]?.score);
-  //        setSleepScore(sleepResponse.data?.data[0]?.score);
-  //      } catch (error) {
-  //        console.error("Error fetching data:", error);
-  //      }
-  //    };
-  //
-  //    fetchData(); // Call fetchData() when component mounts
-  //  }, []); // Empty dependency array ensures fetchData() runs only on component mount
+  const [activityScore, setActivityScore] = useState(null);
+  const [readinessScore, setReadinessScore] = useState(null);
+  const [sleepScore, setSleepScore] = useState(null);
+
+  const getOuraData = async () => {
+    try {
+      // Fetch the daily activity from proxy server
+      const activityResponse = await axios.get(
+        "http://localhost:4000/dailyactivity",
+      );
+      var tempActivityScore = activityResponse.data.data[0]?.score;
+      // console.log(`The activity score is ${tempActivityScore}`);
+      setActivityScore(tempActivityScore);
+
+      // Fetch the sleep data from proxy server
+      const sleepResponse = await axios.get("http://localhost:4000/sleepscore");
+      var tempSleepScore = sleepResponse.data.data[0]?.score;
+      // console.log(`The sleep score is ${tempSleepScore}`);
+      setSleepScore(tempSleepScore);
+
+      // Fetch the readiness data from proxy server
+      const readinessResponse = await axios.get(
+        "http://localhost:4000/readinessscore",
+      );
+      var tempReadinessScore = readinessResponse.data.data[0]?.score;
+      // console.log(`The readiness score is ${tempReadinessScore}`);
+      setReadinessScore(tempReadinessScore);
+    } catch (error) {
+      console.error("Error fetching data from proxy server:", error);
+      return null;
+    }
+  };
 
   // Temporary values to prevent many API requests during testing
-  const activityScore = 94;
-  const readinessScore = 81;
-  const sleepScore = 82;
+  // const activityScore = 99;
+  // const readinessScore = 99;
+  // const sleepScore = 99;
 
+  // Background gradient of component
   const backgroundGradient = "bg-gradient-to-br from-blue-700 to-black";
+
+  // The current date
   const todaysDate = new Date().toDateString();
 
   return (
-    <div className="card bg-gradient-to-tr from-blue-950 to-black text-white w-full h-5/6 rounded-lg flex justify-between items-center flex-col drop-shadow-sm">
+    <div
+      onLoad={getOuraData}
+      className="card bg-gradient-to-tr from-blue-950 to-black text-white w-full h-5/6 rounded-lg flex justify-between items-center flex-col drop-shadow-sm"
+    >
       <div className="containerUpper flex justify-end w-full h-[7%] ">
         <div className="stravaIconContainer w-9 h-9 flex items-center justify-center">
           <img
