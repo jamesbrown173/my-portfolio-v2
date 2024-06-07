@@ -15,21 +15,23 @@ const OuraStats = () => {
     try {
       // Fetch the daily activity from proxy server
       const activityResponse = await axios.get(
-        "http://localhost:4000/dailyactivity",
+        "https://my-portfolio-v2-bice.vercel.app/dailyactivity",
       );
       var tempActivityScore = activityResponse.data.data[0]?.score;
       // console.log(`The activity score is ${tempActivityScore}`);
       setActivityScore(tempActivityScore);
 
       // Fetch the sleep data from proxy server
-      const sleepResponse = await axios.get("http://localhost:4000/sleepscore");
+      const sleepResponse = await axios.get(
+        "https://my-portfolio-v2-bice.vercel.app/sleepscore",
+      );
       var tempSleepScore = sleepResponse.data.data[0]?.score;
       // console.log(`The sleep score is ${tempSleepScore}`);
       setSleepScore(tempSleepScore);
 
       // Fetch the readiness data from proxy server
       const readinessResponse = await axios.get(
-        "http://localhost:4000/readinessscore",
+        "https://my-portfolio-v2-bice.vercel.app/readinessscore",
       );
       var tempReadinessScore = readinessResponse.data.data[0]?.score;
       // console.log(`The readiness score is ${tempReadinessScore}`);
