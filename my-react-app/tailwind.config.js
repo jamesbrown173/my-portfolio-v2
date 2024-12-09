@@ -5,6 +5,7 @@ export default {
   theme: {
     fontFamily: {
       mono: ["DM Mono", "monospace"],
+      hedvig: ["Hedvig Letters Serif", "serif"],
     },
     extend: {
       boxShadow: {

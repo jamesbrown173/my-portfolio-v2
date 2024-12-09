@@ -30,7 +30,7 @@ function About() {
   }, [isInView]);
 
   return (
-    <div className="flex flex-col justify-between items-center pt-[10rem] pb-[10rem]">
+    <div className="flex flex-col justify-between items-center pt-[10rem] pb-[10rem] w-full">
       <h1
         ref={ref}
         className="mb-10 font-mono text-3xl leading-10 px-5 w-full text-left pl-10"
