@@ -43,7 +43,8 @@ function Navbar({ activeSection }) {
   }, []);
 
   function toggleTheme() {
-    document.documentElement.classList.toggle("dark");
+    console.log("need to implement dark theme");
+    // document.documentElement.classList.toggle("dark");
   }
 
   return (
